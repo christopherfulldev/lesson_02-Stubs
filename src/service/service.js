@@ -8,6 +8,16 @@ const serviceRequest = {
                   response.on('error', reject);
             })
         })
+    },
+
+    getPlanets: async function(url) {
+        const returnedResult = await this.makeRequest(url);
+
+        return {
+            name: result.name,
+            surfaceWater: result.surface_water,
+            appearedIn: result.films.length
+        }
     }
 };
 

@@ -1,4 +1,5 @@
 "use strict"
+const { deepStrictEqual} = require("assert")
 const serviceRequest = require("../service");
 const sinon = require("sinon");
 const BASE_URL = require("../base-urls");
@@ -26,7 +27,24 @@ const mocks = {
     }
 
     {
-        const response =  await serviceRequest.makeRequest(BASE_URL.BASE_URL1);
-        console.log("response", response);
+        const expect = {
+            "name": "tatooine",
+            "surfaceWater": "1",
+            "appearedIn": "5"
+        }
+
+        const result = await serviceRequest.getPlanets(BASE_URL.BASE_URL1)
+        deepStrictEqual(results, expect);
+    }
+
+    {
+        const expect = {
+            "name": "Alderaan",
+            "surfaceWater": "40",
+            "appearedIn": "2"
+        }
+
+        const result = await serviceRequest.getPlanets(BASE_URL.BASE_URL2)
+        deepStrictEqual(results, expect);
     }
 })();
