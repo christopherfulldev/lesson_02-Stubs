@@ -1,14 +1,29 @@
 {
   "name": "lesson2-stubs",
   "version": "1.0.0",
-  "description": "",
+  "description": "Expert JS course lesson, Stubs.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Christopher Pinto",
   "license": "ISC",
   "dependencies": {
     "sinon": "^13.0.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christopherfulldev/lesson_02-Stubs.git"
+  },
+  "keywords": [
+    "JS",
+    "Stubs",
+    "Sinon",
+    "Tests"
+  ],
+  "bugs": {
+    "url": "https://github.com/christopherfulldev/lesson_02-Stubs/issues"
+  },
+  "homepage": "https://github.com/christopherfulldev/lesson_02-Stubs#readme"
 }
